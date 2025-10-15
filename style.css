@@ -1,0 +1,246 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f8f9fb;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0047ab; /* Blue branding */
+  padding: 15px 40px;
+}
+
+.navbar h1 {
+  color: #fff;
+  font-size: 22px;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+  background: url("https://images.unsplash.com/photo-1584438784894-089d6a62b8c6?auto=format&fit=crop&w=1600&q=80") no-repeat center center/cover;
+  color: #003366;
+  text-align: center;
+  padding: 120px 20px;
+}
+
+.hero h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+/* Section Styling */
+.section {
+  padding: 60px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 28px;
+  color: #0047ab;
+}
+
+/* ✅ Image grid for Home page */
+.section .image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.section .image-grid img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.section .image-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* ✅ About page (text + image side by side) */
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap; /* makes it responsive */
+  margin-top: 20px;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-image {
+  flex: 1;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.home-gallery p {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto; /* centers within the section */
+  font-size: 1.1rem; /* slightly bigger for emphasis */
+  line-height: 1.6;
+}
+/* Contact Section */
+.contact {
+  background: #f9f9f9; /* light background */
+  padding: 40px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-top: 30px;
+}
+
+.contact h2,
+.contact h3 {
+  text-align: center;
+  color: #004080; /* your blue theme */
+  margin-bottom: 20px;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: center;   /* centers horizontally */
+  align-items: center;       /* centers vertically */
+  gap: 40px;                 /* space between image and text */
+  margin: 0 auto 30px;       /* center whole block */
+  max-width: 1000px;         /* keep layout neat */
+}
+
+.contact-image {
+  width: 350px;              /* adjust size */
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.contact-text {
+  max-width: 500px;
+}
+
+.contact-text p {
+  margin: 10px 0;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Form Section */
+.contact-form {
+  max-width: 900px;
+  margin: 20px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border 0.3s;
+  resize: vertical;
+}
+
+.contact-form textarea {
+  min-height: 180px; /* bigger message box */
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #004080;
+  outline: none;
+}
+
+.contact-form button {
+  background: #004080;
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: #0066cc;
+}
+/* Product Cards */
+.products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.card img {
+  max-width: 100%;
+  border-radius: 10px;
+  height: 200px;
+  object-fit: cover;
+}
+
+footer {
+  text-align: center;
+  background: #0047ab;
+  color: white;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+/* ✅ Apply hover zoom to all images */
+img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
